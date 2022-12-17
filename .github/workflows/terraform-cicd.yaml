@@ -24,6 +24,8 @@ jobs:
           sudo chmod 777 /home/runner/.ssh
           sudo touch /home/runner/.ssh/do_key_01
           sudo touch /home/runner/.ssh/do_key_01.pub
+          sudo chmod 777 /home/runner/.ssh/do_key_01
+          sudo chmod 777 /home/runner/.ssh/do_key_01.pub
           sudo echo "${{ secrets.DO_KEY_01 }}" > /home/runner/.ssh/do_key_01
           sudo echo "${{ secrets.DO_KEY_01_PUB }}" > /home/runner/.ssh/do_key_01.pub
 
