@@ -1,0 +1,10 @@
+.terraform/
+*.tfstate*
+*.tfvars
+*plan.txt
+*.tfplan
+.terraform-version
+*.log
+scripts/
+ansible/*.json
+config/
