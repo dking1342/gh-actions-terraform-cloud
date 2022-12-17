@@ -16,7 +16,7 @@ jobs:
       - name: Install jq
         run: |
           sudo apt-get update
-          apt-get install jq
+          sudo apt-get install jq
 
       - name: SSH setup
         run: |
