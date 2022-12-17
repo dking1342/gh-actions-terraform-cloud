@@ -21,7 +21,8 @@ jobs:
       - name: SSH setup
         run: |
           sudo mkdir -p /home/runner/.ssh
-          sudo chmod 600 /home/runner/.ssh
+          sudo chmod 777 /home/runner/.ssh
+          sudo chmod 777 /home/runner/.ssh/*
           sudo touch /home/runner/.ssh/do_key_01
           sudo touch /home/runner/.ssh/do_key_01.pub
           sudo echo "${{ secrets.DO_KEY_01 }}" > /home/runner/.ssh/do_key_01
