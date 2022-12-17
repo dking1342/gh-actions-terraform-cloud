@@ -22,7 +22,6 @@ jobs:
         run: |
           sudo mkdir -p /home/runner/.ssh
           sudo chmod 777 /home/runner/.ssh
-          sudo chmod 777 /home/runner/.ssh/*
           sudo touch /home/runner/.ssh/do_key_01
           sudo touch /home/runner/.ssh/do_key_01.pub
           sudo echo "${{ secrets.DO_KEY_01 }}" > /home/runner/.ssh/do_key_01
@@ -92,6 +91,6 @@ jobs:
 
       - name: Ansible Playbook
         id: playbook
-        run: ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -e "pub_key=~/.ssh/do_key_01.pub" ./ansible/apache-install.yml
+        run: ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -e "pub_key=/home/runner/.ssh/do_key_01.pub" ./ansible/apache-install.yml
 
       
