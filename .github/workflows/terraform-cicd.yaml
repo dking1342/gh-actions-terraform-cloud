@@ -75,7 +75,7 @@ jobs:
 
       - name: Sleep
         id: sleep
-        run: sleep 30
+        run: sleep 10
 
       - name: Ansible Playbook
         id: playbook
